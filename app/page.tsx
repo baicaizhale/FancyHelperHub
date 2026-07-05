@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState, useCallback } from "react"
 import { IntroAnimation, HERO_REVEAL_MS } from "@/components/intro-animation"
 import { PixelIcon } from "@/components/pixel-icon"
-import { LiveAgentFeed, LiveAgentCounter } from "@/components/live-agent-feed"
+import { LiveAgentCounter } from "@/components/live-agent-feed"
 import { RevealText } from "@/components/reveal-text"
 import { StackingAgentCards } from "@/components/stacking-agent-cards"
 import { MobileNav } from "@/components/mobile-nav"
@@ -488,11 +488,16 @@ export default function FancyHelperPage() {
               </p>
               <div className="mt-10 flex items-end gap-2">
                 <LiveAgentCounter />
-                <span className="text-black/30 text-sm mb-1 tracking-wide">条指令已由 AI 生成执行</span>
+                <span className="text-black/30 text-sm mb-1 tracking-wide">个 GitHub Star</span>
               </div>
             </div>
-            <div className="relative">
-              <LiveAgentFeed />
+            <div className="rounded-2xl border border-black/[0.06] overflow-hidden bg-white/40 p-4">
+              <img
+                src="https://api.star-history.com/svg?repos=baicaizhale/FancyHelper&type=Date"
+                alt="FancyHelper Star History"
+                className="w-full h-auto"
+                style={{ imageRendering: "auto" }}
+              />
             </div>
           </div>
         </div>

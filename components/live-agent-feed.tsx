@@ -196,16 +196,18 @@ export function LiveAgentFeed() {
 }
 
 export function LiveAgentCounter() {
-  const [count, setCount] = useState(3847)
+  const [count, setCount] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const t = setInterval(() => {
-      setCount(v => v + Math.floor(Math.random() * 3 - 1))
-    }, 1200)
-    return () => clearInterval(t)
+    fetch("https://api.github.com/repos/baicaizhale/FancyHelper")
+      .then(r => r.json())
+      .then(d => { if (d.stargazers_count != null) setCount(d.stargazers_count) })
+      .catch(() => {})
   }, [])
+
+  const display = count ?? 0
 
   return (
     <span style={{
@@ -217,7 +219,7 @@ export function LiveAgentCounter() {
       letterSpacing: "-0.02em",
       transition: "color 0.3s ease",
     }}>
-      {mounted ? count.toLocaleString("en-US") : "3,847"}
+      {mounted ? display.toLocaleString("en-US") : "0"}
     </span>
   )
 }
