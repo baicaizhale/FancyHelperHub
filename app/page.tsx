@@ -132,7 +132,6 @@ export default function FancyHelperPage() {
           <div className="flex gap-8 sm:gap-12">
             {[
               { value: "1.18+", label: "Spigot / Paper" },
-              { value: "6+", label: "支持的 AI 提供商" },
               { value: "GPLv3", label: "自由开源" },
             ].map((stat, i) => (
               <div
@@ -492,12 +491,13 @@ export default function FancyHelperPage() {
               </div>
             </div>
             <div className="rounded-2xl border border-black/[0.06] overflow-hidden bg-white/40 p-4">
-              <img
-                src="https://api.star-history.com/svg?repos=baicaizhale/FancyHelper&type=Date"
-                alt="FancyHelper Star History"
-                className="w-full h-auto"
-                style={{ imageRendering: "auto" }}
-              />
+              <a href="https://www.star-history.com/?repos=baicaizhale%2FFancyHelper&type=date&logscale=&legend=top-left">
+                <picture>
+                  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&theme=dark&logscale&legend=top-left" />
+                  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&logscale&legend=top-left" />
+                  <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&logscale&legend=top-left" className="w-full h-auto" />
+                </picture>
+              </a>
             </div>
           </div>
         </div>

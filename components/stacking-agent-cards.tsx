@@ -28,7 +28,7 @@ const AGENTS = [
     label: "多 AI 可选",
     title: "接哪家模型随你挑",
     desc: "默认接入 CloudFlare Workers AI（gpt-oss-120b），也支持 OpenAI、DeepSeek、Azure OpenAI，甚至 Ollama 本地模型。",
-    stats: [{ v: "6+", l: "AI 提供商" }, { v: "本地", l: "Ollama 支持" }],
+    stats: [{ v: "本地", l: "Ollama 支持" }],
     img: "/images/card-models.png",
   },
 ]
