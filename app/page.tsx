@@ -128,7 +128,7 @@ export default function FancyHelperPage() {
             用说人话的方式<br />管理你的<br />Minecraft 服务器。
           </h1>
 
-          {/* 3 metrics — staggered after title */}
+          {/* 2 metrics — staggered after title */}
           <div className="flex gap-8 sm:gap-12">
             {[
               { value: "1.18+", label: "Spigot / Paper" },
@@ -622,7 +622,7 @@ export default function FancyHelperPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             <a
-              href={MODRINTH_URL}
+              href={DOWNLOAD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-[#111] text-white text-sm rounded-xl hover:bg-[#333] transition-colors tracking-widest font-medium"
