@@ -512,27 +512,30 @@ export default function FancyHelperPage() {
             <RevealText className="mt-5 text-4xl md:text-5xl font-light tracking-tight leading-[1.15]">
               {"完全免费，随你怎么拿。"}
             </RevealText>
+            <p className="mt-3 text-sm text-black/30">
+              * FancyHelper 会进行自动更新，所以您无需在意下载的版本新旧
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3" onMouseMove={handleMouse}>
             {[
               {
-                name: "MODRINTH",
+                name: "构建站",
                 price: "免费",
                 sub: "推荐的下载渠道",
-                features: ["一键下载最新版", "版本历史齐全", "自动匹配服务端版本", "更新说明清晰"],
-                href: MODRINTH_URL,
-                cta: "去 MODRINTH 下载",
+                features: ["CI 自动构建", "抢先体验新功能", "包含开发版", "适合折腾党"],
+                href: DOWNLOAD_URL,
+                cta: "打开构建站",
                 highlight: true,
                 delay: 0,
               },
               {
-                name: "构建站",
+                name: "MODRINTH",
                 price: "免费",
-                sub: "尝鲜最新构建",
-                features: ["CI 自动构建", "抢先体验新功能", "包含开发版", "适合折腾党"],
-                href: DOWNLOAD_URL,
-                cta: "打开构建站",
+                sub: "",
+                features: ["下载速度较快", "下载到的版本可能落后"],
+                href: MODRINTH_URL,
+                cta: "去 MODRINTH 下载",
                 delay: 80,
               },
               {
