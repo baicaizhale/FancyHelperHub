@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://fancy.baicaizhale.top',
     siteName: 'FancyHelper',
+    images: [
+      {
+        url: 'https://fancy.baicaizhale.top/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'FancyHelper — Minecraft AI 管理插件',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FancyHelper — Minecraft AI 管理插件',
     description: '用说人话的方式管理你的 Minecraft 服务器。不用背指令，不用翻 Wiki。',
+    images: ['https://fancy.baicaizhale.top/og-image.png'],
   },
   icons: {
     icon: [
