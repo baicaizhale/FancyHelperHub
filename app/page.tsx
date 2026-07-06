@@ -7,7 +7,6 @@ import { LiveAgentCounter } from "@/components/live-agent-feed"
 import { RevealText } from "@/components/reveal-text"
 import { StackingAgentCards } from "@/components/stacking-agent-cards"
 import { MobileNav } from "@/components/mobile-nav"
-import { DevExSection } from "@/components/devex-section"
 
 const GITHUB_URL = "https://github.com/baicaizhale/FancyHelper"
 const MODRINTH_URL = "https://modrinth.com/plugin/fancyhelper"
@@ -440,9 +439,6 @@ export default function FancyHelperPage() {
           </div>
         </div>
       </section>
-
-      {/* ── QUICK START (interactive code panel) ──────────────────────────── */}
-      <DevExSection />
 
       {/* ── MARQUEE CAPABILITIES ──────────────────────────────────────────── */}
       <section className="py-0 border-t border-black/[0.06] overflow-hidden select-none">
