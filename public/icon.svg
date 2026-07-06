@@ -1,26 +1,38 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
+      .bg { fill: #111; }
+      .fg { fill: #F5F4F0; }
+      .dim { fill: #F5F4F0; fill-opacity: 0.3; }
     }
     @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
+      .bg { fill: #F5F4F0; }
+      .fg { fill: #111; }
+      .dim { fill: #111; fill-opacity: 0.3; }
     }
   </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
-  <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
-  </defs>
+
+  <!-- Background rounded square -->
+  <rect class="bg" width="180" height="180" rx="37" />
+
+  <!-- Command block "bezel" (outer frame) -->
+  <rect class="fg" x="38" y="38" width="104" height="104" rx="16" />
+
+  <!-- Inner screen (punched out = bg color) -->
+  <rect class="bg" x="46" y="46" width="88" height="88" rx="10" />
+
+  <!-- Command prompt ">" as pixel blocks -->
+  <rect class="fg" x="64" y="76" width="8" height="8" rx="1.5" />
+  <rect class="fg" x="64" y="92" width="8" height="8" rx="1.5" />
+  <rect class="fg" x="74" y="84" width="8" height="8" rx="1.5" />
+  <rect class="fg" x="74" y="100" width="8" height="8" rx="1.5" />
+  <rect class="fg" x="84" y="92" width="8" height="8" rx="1.5" />
+
+  <!-- Cursor block -->
+  <rect class="fg" x="98" y="100" width="8" height="16" rx="1.5" />
+
+  <!-- Decorative dots (command block "pixel grid" feel) -->
+  <rect class="dim" x="64" y="64" width="5" height="5" rx="1" />
+  <rect class="dim" x="84" y="64" width="5" height="5" rx="1" />
+  <rect class="dim" x="84" y="80" width="5" height="5" rx="1" />
 </svg>
