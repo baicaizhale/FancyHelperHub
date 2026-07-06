@@ -57,6 +57,19 @@ function Tag({ children }: { children: React.ReactNode }) {
   )
 }
 
+// ─── bStats chart ──────────────────────────────────────────────────────────
+function BstatsChart() {
+  return (
+    <a href="https://bstats.org/plugin/bukkit/FancyHelper/29036" target="_blank" rel="noopener noreferrer" className="block w-full">
+      <img
+        alt="bStats 统计: 使用 FancyHelper 的服务器数量"
+        src="https://bstats.org/signatures/bukkit/FancyHelper.svg"
+        className="w-full h-auto"
+      />
+    </a>
+  )
+}
+
 // ─── Main page ────────────────────────────────────────────────────────────────
 export default function FancyHelperPage() {
   const [heroReady, setHeroReady] = useState(false)
@@ -331,12 +344,16 @@ export default function FancyHelperPage() {
                 <Tag>CONFIG.YML</Tag>
                 <h3 className="mt-3 text-lg font-light mb-2">改几行配置就能换</h3>
                 <p className="text-xs text-black/45 leading-relaxed mb-4">OpenAI 兼容端点随便接，本地模型也没问题。</p>
-                <div className="bg-black/[0.05] rounded-lg border border-black/[0.07] p-3 font-mono text-[11px] text-black/50 leading-relaxed">
-                  <span className="text-black/25"># config.yml</span><br />
-                  <span className="text-blue-600/70">ai</span>:<br />
-                  {"  "}<span className="text-amber-700/70">provider</span>: <span className="text-green-700/70">openai</span><br />
-                  {"  "}<span className="text-amber-700/70">model</span>: <span className="text-green-700/70">deepseek-chat</span><br />
-                  {"  "}<span className="text-amber-700/70">base_url</span>: <span className="text-green-700/70">...</span>
+                <div className="bg-black/[0.05] rounded-lg border border-black/[0.07] p-3 text-[11px] text-black/50 leading-relaxed">
+                  <span className="text-black/35">*</span>
+                  <a
+                    href="https://blog.baicaizhale.top/post/openai-compatible-providers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600/70 hover:text-blue-600 underline underline-offset-2 decoration-blue-600/30"
+                  >
+                    见 https://blog.baicaizhale.top/post/openai-compatible-providers
+                  </a>
                 </div>
               </div>
 
@@ -487,13 +504,7 @@ export default function FancyHelperPage() {
               </div>
             </div>
             <div className="rounded-2xl border border-black/[0.06] overflow-hidden bg-white/40 p-4">
-              <a href="https://www.star-history.com/?repos=baicaizhale%2FFancyHelper&type=date&logscale=&legend=top-left">
-                <picture>
-                  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&theme=dark&logscale&legend=top-left" />
-                  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&logscale&legend=top-left" />
-                  <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=baicaizhale/FancyHelper&type=date&logscale&legend=top-left" className="w-full h-auto" />
-                </picture>
-              </a>
+              <BstatsChart />
             </div>
           </div>
         </div>
